@@ -16,7 +16,6 @@ function App() {
           padding: "5%",
           display: "flex",
           flexDirection: "row",
-          gridColumnGap: "5%",
         }}
       >
         <div>
@@ -25,8 +24,8 @@ function App() {
         <div
           style={{
             position: "fixed",
-            right: "10%",
-            paddingTop: "200px",
+            right: "2%",
+            paddingTop: "4.5%",
           }}
         >
           <VideoPlayer />

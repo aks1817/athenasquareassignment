@@ -4,12 +4,11 @@ import PropTypes from "prop-types";
 const VideoPlayer = (props) => {
   return (
     <div className="">
-      <div className="" style={{ width: "90%" }}>
+      <div className="" style={{ width: "85%" }}>
         <video
           style={{
             width: "100%",
             borderRadius: "40px",
-            marginBottom: "100px",
           }}
           autoPlay
           muted

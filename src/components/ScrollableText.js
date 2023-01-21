@@ -9,10 +9,11 @@ const ScrollableText = ({ getText, texts }) => {
   useEffect(() => {
     getText();
   }, [getText]);
+
   return (
-    <div className="content" style={{ width: "600px" }}>
-      {texts.map((text) => (
-        <div className="container" id="panel1">
+    <div className="content" style={{ width: "45%" }}>
+      {texts.map((text, index) => (
+        <div className="container" id="panel1" key={index}>
           <div style={{ backgroundColor: "White", width: "100%" }}>
             <Card className="mb-2 border-0">
               <Card.Body>
@@ -31,7 +32,7 @@ const ScrollableText = ({ getText, texts }) => {
                 <Card.Text
                   style={{
                     fontSize: "1.5rem",
-                    marginTop: "40px",
+                    marginTop: "10%",
                   }}
                 >
                   {text.description}
