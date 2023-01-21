@@ -2,10 +2,12 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import ScrollableText from "./components/ScrollableText";
 import VideoPlayer from "./components/VideoPlayer";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <div>
         <NavBar />
       </div>
@@ -14,7 +16,6 @@ function App() {
           padding: "5%",
           display: "flex",
           flexDirection: "row",
-
           gridColumnGap: "5%",
         }}
       >
@@ -24,14 +25,14 @@ function App() {
         <div
           style={{
             position: "fixed",
-            right: "300px",
-            paddingTop: "100px",
+            right: "10%",
+            paddingTop: "200px",
           }}
         >
           <VideoPlayer />
         </div>
       </div>
-    </>
+    </Provider>
   );
 }
 

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const VideoPlayer = (props) => {
   return (
     <div className="">
-      <div className="" style={{ width: "763px" }}>
+      <div className="" style={{ width: "90%" }}>
         <video
           style={{
             width: "100%",
