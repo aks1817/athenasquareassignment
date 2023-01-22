@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-const VideoPlayer = (props) => {
+const VideoPlayer = ({ url }) => {
   return (
     <div className="">
       <div className="" style={{ width: "85%" }}>
@@ -13,14 +14,18 @@ const VideoPlayer = (props) => {
           autoPlay
           muted
           loop
-          object-fit
-          src="https://global-uploads.webflow.com/62efc7cb58ad153bfb146988/6341303c29c5340961dc9ae6_Mco-1-transcode.mp4"
+          src={url}
         ></video>
       </div>
     </div>
   );
 };
 
-VideoPlayer.propTypes = {};
+VideoPlayer.propTypes = {
+  url: PropTypes.string,
+};
+const mapStateToProps = (state) => ({
+  url: state.videoUrl,
+});
 
-export default VideoPlayer;
+export default connect(mapStateToProps)(VideoPlayer);
